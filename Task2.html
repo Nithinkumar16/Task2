@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)), url('img1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            color: #fff;
+        }
+
+        nav {
+            background-color: rgba(51, 51, 51, 0.9);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            position: relative;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        nav ul li ul {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            top: 40px;
+        }
+
+        nav ul li ul li {
+            margin: 0;
+        }
+
+        nav ul li ul li a {
+            padding: 10px 15px;
+        }
+
+        nav ul li ul li a:hover {
+            background-color: #555;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 80px); /* Adjusting for nav and footer height */
+            text-align: center;
+        }
+
+        .booking-box {
+            text-decoration: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 15px;
+            background: indianred;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .booking-box:hover {
+            background: white;
+            color: indianred;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(51, 51, 51, 0.9);
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>Logo</div>
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+                <ul>
+                    <li><a href="team.html">Our Team</a></li>
+                    <li><a href="mission.html">Our Mission</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul>
+                    <li><a href="Foods.html">Foods</a></li>
+                    <li><a href="Suggestions.html">Suggestions</a></li>
+                    
+                        <li><a href="Hill Station.html">Hill Station</a></li>
+                        <li><a href="Water Falls.html">Water Falls</a></li>
+                    
+                </ul>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Welcome to the Our Place</h1>
+        <div class="booking-box">
+            <p>Book your Places</p>
+        </div>
+    </main>
+    <footer>
+        &copy; 2024 Simple Website. All rights reserved.
+    </footer>
+</body>
+</html>
